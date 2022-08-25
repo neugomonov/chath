@@ -11,4 +11,7 @@ Chath is a simple messaging app.
 ## Tech Stack
 
 - [React](https://reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [Expo](https://expo.dev/)
 - [Firebase](https://firebase.google.com/)
