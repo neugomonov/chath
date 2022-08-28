@@ -3,7 +3,7 @@
   💬
 <h2>Information</h2>
 
-Chath is a simple messaging app. 
+Chath is a simple mobile messaging app. 
 	
 <h2>Screenshots</h2>
 </div>  
