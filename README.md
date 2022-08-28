@@ -1,12 +1,14 @@
 <div align="center">
 	<h1><a href="#">Chath</a></h1>
   💬
-<h2>Information</h1>
+<h2>Information</h2>
 
 Chath is a simple messaging app. 
 	
-</div>
+<h2>Screenshots</h2>
+</div>  
 
+![](screenshot.png)
 
 ## Tech Stack
 
