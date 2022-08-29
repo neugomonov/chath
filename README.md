@@ -7,6 +7,9 @@ Chath is a simple mobile messaging app.
 	
 <h2>Screenshots</h2>
 <img src="screenshot.png"/>  
+<br>
+<img src="expo-go.svg"/>  
+
 </div>  
 
 ## Tech Stack
