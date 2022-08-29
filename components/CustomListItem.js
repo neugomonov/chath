@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { Avatar } from "react-native-elements";
 import { ListItem } from "react-native-elements";
 import { db } from "../firebase";
@@ -21,7 +21,6 @@ const CustomListItem = ({ id, chatName, enterChat }) => {
         <ListItem
             key={id}
             onPress={() => enterChat(id, chatName)}
-            key={id}
             bottomDivider
         >
             <Avatar
