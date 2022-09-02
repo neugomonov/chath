@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { Button, Input, Image } from "react-native-elements";
+import { Input, Image } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
 import { KeyboardAvoidingView } from "react-native";
 import { auth } from "../firebase";
+import { Button, Text } from "@rneui/themed";
 
 const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
@@ -27,9 +28,7 @@ const LoginScreen = ({ navigation }) => {
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
             <StatusBar style="light" />
             <Image
-                source={{
-                    uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Signal-Logo.svg/1200px-Signal-Logo.svg.png",
-                }}
+                source={require("../assets/adaptive-icon.png")}
                 style={{ width: 200, height: 200 }}
             />
             <View style={styles.inputContainer}>
@@ -51,19 +50,25 @@ const LoginScreen = ({ navigation }) => {
                 />
             </View>
             <Button
-                containerStyle={styles.button}
+                title={<CustomTitleLogin />}
+                buttonStyle={styles.button}
                 onPress={signIn}
-                title="Login"
             />
             <Button
+                title={<CustomTitleRegister />}
                 onPress={() => navigation.navigate("Register")}
-                containerStyle={styles.button}
+                buttonStyle={styles.buttonOutline}
                 type="outline"
-                title="Register"
             />
             <View style={{ height: 100 }} />
         </KeyboardAvoidingView>
     );
+};
+const CustomTitleLogin = () => {
+    return <Text style={styles.textButton}>Login</Text>;
+};
+const CustomTitleRegister = () => {
+    return <Text style={styles.textButtonOutline}>Register</Text>;
 };
 
 export default LoginScreen;
@@ -77,5 +82,27 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
     },
     inputContainer: { width: 300 },
-    button: { width: 200, marginTop: 10 },
+    button: {
+        width: 200,
+        marginTop: 10,
+        backgroundColor: "#B38965",
+        borderWidth: 1.5,
+        borderColor: "black",
+        borderRadius: 0,
+        color: "#000",
+    },
+    buttonOutline: {
+        width: 200,
+        marginTop: 10,
+        borderWidth: 1.5,
+        borderColor: "#B38965",
+        borderRadius: 0,
+    },
+    textButton: {
+        fontSize: 18,
+    },
+    textButtonOutline: {
+        fontSize: 18,
+        color: "#B38965",
+    },
 });
