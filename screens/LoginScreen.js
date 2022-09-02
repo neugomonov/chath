@@ -28,9 +28,7 @@ const LoginScreen = ({ navigation }) => {
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
             <StatusBar style="light" />
             <Image
-                source={{
-                    uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Signal-Logo.svg/1200px-Signal-Logo.svg.png",
-                }}
+                source={require("../assets/adaptive-icon.png")}
                 style={{ width: 200, height: 200 }}
             />
             <View style={styles.inputContainer}>
