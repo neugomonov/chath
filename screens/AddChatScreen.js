@@ -1,9 +1,9 @@
 import React, { useLayoutEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Input } from "react-native-elements/dist/input/Input";
 import { AntDesign } from "@expo/vector-icons";
-import { Button } from "react-native";
 import { db } from "../firebase";
+import { Button, Text } from "@rneui/themed";
 
 const AddChatScreen = ({ navigation }) => {
     const [input, setInput] = useState("");
@@ -39,14 +39,27 @@ const AddChatScreen = ({ navigation }) => {
             <Button
                 disabled={!input}
                 onPress={createChat}
-                title="Create a new chat"
+                buttonStyle={styles.button}
+                title={<CustomTitle />}
             />
         </View>
     );
+};
+const CustomTitle = () => {
+    return <Text style={styles.textButton}>Create a new chat</Text>;
 };
 
 export default AddChatScreen;
 
 const styles = StyleSheet.create({
     container: { backgroundColor: "white", padding: 30, height: "100%" },
+    button: {
+        backgroundColor: "#B38965",
+        borderWidth: 1.5,
+        borderColor: "black",
+        borderRadius: 0,
+    },
+    textButton: {
+        fontSize: 18,
+    },
 });

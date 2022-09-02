@@ -2,8 +2,10 @@ import { StatusBar } from "expo-status-bar";
 import React, { useLayoutEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { KeyboardAvoidingView } from "react-native";
-import { Button, Input, Text } from "react-native-elements";
+import { Input } from "react-native-elements";
 import { auth } from "../firebase";
+import { Button, Text } from "@rneui/themed";
+
 const RegisterScreen = ({ navigation }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -65,14 +67,16 @@ const RegisterScreen = ({ navigation }) => {
                 />
             </View>
             <Button
-                containerStyle={styles.button}
-                raised
+                buttonStyle={styles.button}
                 onPress={register}
-                title="Register"
+                title={<CustomTitleRegister />}
             />
             <View style={{ height: 100 }} />
         </KeyboardAvoidingView>
     );
+};
+const CustomTitleRegister = () => {
+    return <Text style={styles.textButton}>Register</Text>;
 };
 
 export default RegisterScreen;
@@ -88,6 +92,13 @@ const styles = StyleSheet.create({
     button: {
         width: 200,
         marginTop: 10,
+        backgroundColor: "#B38965",
+        borderWidth: 1.5,
+        borderColor: "black",
+        borderRadius: 0,
+    },
+    textButton: {
+        fontSize: 18,
     },
     inputContainer: {
         width: 300,
