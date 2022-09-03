@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - run: "yarn install --immutable && expo publish && npx expo export:web"
+            - run: "yarn install --immutable && npx expo publish && npx expo export:web"
             - uses: FirebaseExtended/action-hosting-deploy@v0
               with:
                   repoToken: "${{ secrets.GITHUB_TOKEN }}"
