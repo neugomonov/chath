@@ -1,7 +1,6 @@
 <div align="center">
 	<h1><a href="https://chath-v-v.web.app/">Chath</a></h1>
   <img src="assets/adaptive-icon.png" alt="Logo" width="200"/>
-<h2>Information</h2>
 
 Chath is a simple cross-platform messaging app.
 
