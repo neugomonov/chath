@@ -16,7 +16,7 @@ const CustomListItem = ({ id, chatName, enterChat }) => {
                 setChatMessages(snapshot.docs.map((doc) => doc.data()))
             );
         return unsubscribe;
-    });
+    }, []);
     return (
         <ListItem
             key={id}
